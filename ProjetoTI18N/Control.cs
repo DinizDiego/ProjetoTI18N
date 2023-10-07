@@ -42,6 +42,8 @@ namespace ProjetoTI18N
                               "\n2. Subtrair" +
                               "\n3. Multiplicar" +
                               "\n4. Dividir" +
+                              "\n5. Potência" +
+                              "\n6. Raiz" +
                               "\n\n Escolha uma das opções acima: ");
             ConsultarOpcao = Convert.ToInt32(Console.ReadLine());
         }//Fim do método Menu
@@ -88,6 +90,17 @@ namespace ProjetoTI18N
                         {
                             Console.WriteLine("A divisão dos números digitados é: " + calc.Dividir());
                         }
+                        break;
+
+                    case 5:
+                        ColetarNum1();//Pegando o primeiro número
+                        ColetarNum2();//pegando o segumndo número
+                        Console.Write("A potência é: " + calc.Potencia());
+                        break;
+
+                    case 6: 
+                        ColetarNum1();
+                        Console.WriteLine("A raiz do primeiro número é: " + calc.Raiz());
                         break;
                     default:
                         Console.WriteLine("Opção escolhida não é válida, tente novamente!");
